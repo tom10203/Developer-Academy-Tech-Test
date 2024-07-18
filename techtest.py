@@ -60,7 +60,7 @@ def main(row: int, max_degrees: float, radius: float) -> list:
 
     # Logic I use to see if point is visible:
     # Step 1: Check to see if distance between point A (anchor_point) and point B (point_to_check) is greater than radius. If so then the point cannot be visible so continue.
-    # Step 2: Check to see if the angle bewteen Point A and Point B, relative to direction, is less than maximum_degrees/2. i.e If direction in 'North' and angle is 90 degrees, then only points 45 degree "either side" of the direction vector are valid
+    # Step 2: Check to see if the angle bewteen Point A and Point B, relative to direction, is less than maximum_degrees. i.e If direction in 'North' and angle is 45 degrees, then only points 45 degree "either side" of the direction vector are valid
     # Step 3: If step 2 and 3 are vlid, append relevant results to valid_points
 
     for row_num in points.keys():
@@ -92,7 +92,7 @@ def main(row: int, max_degrees: float, radius: float) -> list:
     return valid_points
 
 row = input('Please enter row number: ')
-degrees = input('Please enter degree of cone (i.e width/2): ')
+degrees = input('Please enter degree of cone (i.e width): ')
 radius = input('Please enter radius of cone: ')
 
 print(main(int(row), float(degrees), float(radius)))
