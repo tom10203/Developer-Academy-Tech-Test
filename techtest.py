@@ -84,7 +84,7 @@ def main(row: int, max_degrees: float, radius: float) -> list:
             (get_mod_of_vect(direction_vector)*get_mod_of_vect(direction_vect_to_point))
         )
 
-        angle_in_degrees = np.rad2deg(angle)
+        angle_in_degrees = round(np.rad2deg(angle),0)
 
         if angle_in_degrees <= (max_degrees): 
             valid_points.append([row_to_check['x'], row_to_check['y'], row_num, row_to_check['dir']])
